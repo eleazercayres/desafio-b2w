@@ -1,0 +1,27 @@
+server.port: 8082
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: db1
+      url: mongodb://localhost/db1
+  application:
+    name: desfio
+
+feign:
+  httpclient:
+    max-connections: 1
+    connection-timeout: 2000
+
+application:
+  swapi:
+    url: https://swapi.co/api/
+    
+pool:
+  swapi:
+    maxConn: 20
+    maxRoutes: 200
+    connTimeout: 60000
+    readTimeout: 60000

@@ -1,0 +1,22 @@
+spring:
+  application.name: eligibility-service
+  cloud.config.uri: http://mobicare-configserver-client:d82a38315aa3f7f20097aff0243313ef@sccs.oisdp.mobicare.com.br:8888/
+info:
+  name: ${spring.application.name}
+  version: ${project.version}
+  build: ${project.version}.${buildNumber}
+  description: ${project.description}
+
+
+---
+
+spring:
+  profiles: claro
+  application.name: eligibility-service
+  cloud.config.uri: http://mobicare-configserver-client:d82a38315aa3f7f20097aff0243313ef@internal-microservices.clarosdp.mobicare/cloud-config-api/
+
+info:
+  name: ${spring.application.name}
+  version: ${project.version}
+  build: ${project.version}.${buildNumber}
+  description: ${project.description}
